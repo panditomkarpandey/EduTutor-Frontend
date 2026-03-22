@@ -1,5 +1,8 @@
 // ── Config ────────────────────────────────────────────────────────────────────
-const API_BASE = window.API_BASE || 'https://edututor-wjdu.onrender.com/api';
+const API_BASE = window.API_BASE ||
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:8000/api'
+    : 'https://edututor-backend-2.onrender.com/api');
 
 // ── Token Management ──────────────────────────────────────────────────────────
 const Auth = {
